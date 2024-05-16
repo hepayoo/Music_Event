@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Poppins:wght@300;400;500&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top, #000000cc, rgb(51, 0, 0)), url('./assets/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header .container {
+    width: 100%;
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header .header-services {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0rem;
+}
+
+.header-services .icon {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.header-services .icon:hover {
+    transform: scale(1.1);
+}
+
+.header-services .icon img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.header .header-title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.header .header-trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .header-trailer .icon-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    color: #ccc;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: 1px solid #cccccc77;
+    cursor: pointer;
+}
+
+.header .header-trailer span {
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header .header-trailer:hover i,
+.header .header-trailer:hover span {
+    color: rgba(76, 27, 0, 0.924);
+    border-color: rgba(76, 27, 0, 0.924);
+}
+
+.header .header-description {
+    color: #bbb;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 2rem 0rem;
+    max-width: 800px;
+}
+
+.header .header-description span {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    padding-left: 0.4rem;
+  
+    transition: all 4s;
+    cursor: pointer;
+}
+
+.header .header-description span.strong {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.header .header-description span.small {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+
+}
+
+.header .header-description span:hover {
+    color: #fff;
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+   
+}
+
+
+section {
+    width: 100%;
+    height: fit-content;
+    padding: 2rem 0rem;
+}
+
+section .container {
+    width: 100%;
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+
+}
+
+section .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+section .heading .subtitle {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 400;
+    text-transform: uppercase;
+    transform: rotate(5deg);
+}
+
+
+section .heading .title {
+    font-size: 3.4rem;
+    color: #444;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.about {
+    background: linear-gradient(#280000, #0d0000);
+    color: #aaa;
+}
+
+.about .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0rem;
+    border-bottom: 5rem solid #050000;
+
+}
+
+.about .image {
+    width: 100%;
+    max-height: 520px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.about .image img {
+    width: 70%;
+    height: fit-content;
+    object-fit: cover;
+    transition: all 2s;
+
+}
+
+.about .image:hover img {
+    transform: scale(1.1);
+}
+
+.about .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 0rem;
+}
+
+.about .content .item-subtitle {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.about .content .item-title {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.about .content .item-description {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    color: #ddd;
+    font-weight: 300;
+    padding-right: 5rem;
+   
+}
+
+
+.latests,.galliers {
+    background-color: #fafafa;
+}
+
+.latests .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    padding: 3rem 0rem;
+}
+
+.latests .items .item {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #ccc;
+    overflow: hidden;
+    height: 430px;
+    transition: all 1s;
+}
+
+.latests .items .item img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    transition: all 1s;
+
+}
+
+.latests .items .item:hover img {
+    transform: scale(1.1);
+}
+
+.latests .item .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 1rem;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+}
+
+.latests .item .d-title {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0.33rem 5px;
+
+}
+
+.latests .item .d-subtitle {
+    font-size: 0.8rem;
+    color: #252b45;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+.latests .item .btn-explore {
+    margin-top: 1rem;
+    padding: 0.68rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    color: #444;
+    background-color: #bdc9fc;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.latests .item .btn-explore:hover {
+    color: #fff;
+    background-color: #00030e;
+}
+.galliers .items {
+    column-count: 3;
+    column-width: 280px;
+    width: 100%;
+    gap: 0.25rem;
+}
+.galliers .items .item{
+    position: relative;
+   background-color: #fff;
+   border: 0.25rem solid #fff;
+   border-bottom: 0rem solid #fff;
+   box-shadow: 2px 2px 4px #ccc;
+   cursor: pointer;
+   overflow: hidden;
+   margin-bottom: 0.25rem;
+}
+.galliers .items .item .btn-more{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    padding: 0.7rem 1.6rem;
+   border:1px solid #ccc;
+    background-color: #ffffffed;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    color: #444;
+    cursor: pointer;
+    transition: all 1s;
+    opacity: 0;
+
+}
+.galliers .items .item:hover .btn-more{
+    opacity: 1;
+}
+.galliers .items .item img{
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    transition: all 1s;
+ }
+ .galliers .items .item img:hover{
+    transform: scale(1.2);
+ }
+.quote {
+    width: 100%;
+    max-height: 400px;
+    background: linear-gradient(to right, #00000088, #550101c3), url('./assets/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.quote .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 9vh 1rem;
+}
+
+.quote .description {
+    height: fit-content;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+}
+
+.quote .content .icon {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    color: #fafafa;
+}
+
+.quote .content p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    color: #ccc;
+    padding-top: 2rem;
+}
+
+.connected {
+    width: 100%;
+    max-height: fit-content;
+    background: linear-gradient(to top, #00000088, #550101c3), url('./assets/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.connected .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9vh 1rem;
+    text-align: center;
+}
+
+.connected .subtitle {
+    font-size: 0.9rem;
+    color: #fafafa;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.connected .title {
+    font-size: 5vw;
+    letter-spacing: 0.5rem;
+    -webkit-background-clip: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(251, 221, 221);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.connected .description {
+    height: fit-content;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 0rem;
+}
+
+.connected .content .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #550101e7;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5501014f;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.connected .content .icon:hover {
+    border: 1px solid #f0f0f0;
+    color: #fff;
+    background-color: #550101e7;
+}
