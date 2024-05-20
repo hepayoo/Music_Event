@@ -106,57 +106,41 @@ Get ready to experience the thrill of a lifetime! 🎉 Join us and let the excit
     <div class="heading">
       <h5 class="subtitle">Be Present Next time</h5>
       <h1 class="title">Our Latests Events</h1>
+      <a href="./create.php" class="btn-explore item-b">add event</a>
     </div>
+
+  
+
+
     <div class="container">
       <div class="items">
 
-        <div class="item item-l">
-          <a href="event.html" class="item-link" target="_blank">
-            <img src="./assets/media-1.jpg" alt="" srcset="">
-          </a>
-          <div class="details">
-            <h5 class="d-subtitle item-t">EuroParis Event</h5>
-            <h3 class="d-title item-l">The Light Is Here</h3>
-            <a href="event.html" class="btn-explore item-b">explore more</a>
-          </div>
-        </div>
-        <div class="item item-l">
-          <a href="event.html" class="item-link" target="_blank">
-            <img src="./assets/media-2.jpg" alt="" srcset="">
-          </a>
-          <div class="details">
-            <h5 class="d-subtitle item-t">Europe Games</h5>
-            <h3 class="d-title item-l">"The Light" Will Open</h3>
-            <div class="btn-explore item-b">explore more</div>
-          </div>
-        </div>
-
-        <div class="item item-r">
-          <a href="event.html" class="item-link" target="_blank">
-
-            <img src="./assets/media-3.jpg" alt="" srcset="">
-          </a>
-
-          <div class="details">
-            <h5 class="d-subtitle item-t">USA 0P Event</h5>
-            <h3 class="d-title item-l">The Light XD</h3>
-            <a href="event.html" class="btn-explore item-b">explore more</a>
-          </div>
-        </div>
-
-        <div class="item item-r">
-          <a href="event.html" class="item-link" target="_blank">
-
-            <img src="./assets/media-4.jpg" alt="" srcset="">
-          </a>
-
-          <div class="details">
-            <h5 class="d-subtitle item-t">USA 07 Event</h5>
-            <h3 class="d-title item-l">The Light Inside Films</h3>
-            <a href="event.html" class="btn-explore item-b">explore more </a>
-
-          </div>
-        </div>
+      <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $database = "event_dp";
+            $connection = new mysqli($servername, $username, $password, $database);
+            if ($connection->connect_error) {
+                die("Connection failed: " . $connection->connect_error);
+            }
+            $sql = "SELECT * FROM event";
+            $result = $connection->query($sql);
+            if (!$result) {
+                die("Invalid query: " . $connection->error);
+            }
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                <div class="item item-l">
+                    <img src="assets/' . htmlspecialchars($row['image']) . '" alt="">
+                    <div class="details">
+                        <h5 class="d-subtitle item-t">' . htmlspecialchars($row['date']) . '</h5>
+                        <h3 class="d-title item-l">"' . htmlspecialchars($row['title']) . '"</h3>
+                        <a href="/Events/register.php" class="btn-explore item-b">Save spot</a>
+                    </div>
+                </div>';
+            }
+            ?>
 <!-- 
   
   container  for music events 
