@@ -136,7 +136,7 @@ Get ready to experience the thrill of a lifetime! 🎉 Join us and let the excit
                     <div class="details">
                         <h5 class="d-subtitle item-t">' . htmlspecialchars($row['date']) . '</h5>
                         <h3 class="d-title item-l">"' . htmlspecialchars($row['title']) . '"</h3>
-                        <a href="/Events/register.php" class="btn-explore item-b">Save spot</a>
+                        <a href="./register.php?event_id=' . htmlspecialchars($row['id']) . '" class="btn-explore item-b">Save spot</a>
                     </div>
                 </div>';
             }
